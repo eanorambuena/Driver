@@ -1,4 +1,4 @@
-from egg.resources.modules import installFromRequests
+from driver import installFromRequests
 
 installFromRequests() # Install requests
 

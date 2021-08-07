@@ -1,0 +1,1 @@
+from egg.resources.modules import installFromRequests
