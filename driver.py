@@ -1,6 +1,6 @@
-from driver import installFromRequests
+from driver import init
 
-installFromRequests() # Install requests
+init() # Initialize driver file
 
 import cell1
 
