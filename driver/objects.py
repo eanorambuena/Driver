@@ -1,9 +1,59 @@
+# Imports
+from egg.resources.strings import normalize
+
+"""
+FUNCTION var_name(variable)
+
+Returns the name of a variable from globals()
+
+Eg:
+variable = 3
+print(var_name(variable))
+>>> variable
+
+That includes the names of classes instances
+
+Eg:
+instance = MyClass()
+print(var_name(instance))
+>>> instance
+"""
 def var_name(variable):
     for name in globals():
         if eval(name) == variable:
             return(name)
 
-class var:
+"""
+CLASS var()
+
+Ex:
+number = var(3)
+number.int
+>>> 3
+number.float
+>>> 3.0
+number.str
+>>> 3
+number.bool
+>>> True
+
+Ex:
+word = var("true")
+word.int
+>>> 4
+word.float
+>>> 4.0
+word.str
+>>> true
+word.bool
+>>> True
+
+Ex:
+spanish_phrase = var("El camión es mío")
+spanish_phrase.norm
+>>> El camion es mio
+"""
+class var():
     def __init__(self, var):
         self.var=var
     @property
@@ -27,19 +77,11 @@ class var:
             else:
                 return False 
         return bool(self.var) # If self.var==0, returns 0. Else, returns 1
-    def normalize(self): # Retrieved from https://micro.recursospython.com/recursos/como-quitar-tildes-de-una-cadena.html
-        replacements = (
-            ("á", "a"),
-            ("é", "e"),
-            ("í", "i"),
-            ("ó", "o"),
-            ("ú", "u"),
-        )
-        for a, b in replacements:
-            s = self.str.replace(a, b).replace(a.upper(), b.upper())
-        return s
+    @property
+    def norm(self): # Remove accents from words
+        return normalize(self.str)
 
 if __name__=="__main__":
     If = "you are reading this,"
     you = var("are not importing this file")
-    print(var_name(If), If, var_name(you), you.str)
+    print(var_name(If), If, var_name(you), you.str) #Example of usage
