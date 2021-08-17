@@ -14,7 +14,7 @@ def display(T, delta: int = 400, condition: bool = True):
 	while condition:
 		print(T)
 		sleep(delta)
-    	clearConsole()
+		clearConsole()
 
 def get(tag: str):
 	i=input(blue+"$"+tag+"> "+green)

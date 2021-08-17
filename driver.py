@@ -7,3 +7,5 @@ import cell1
 import cell2
 
 import cell3
+
+import driver.assistant
