@@ -1,4 +1,4 @@
-from driver import init
+from driver import init, Server
 
 init() # Initialize driver file
 
@@ -8,4 +8,4 @@ import cell2
 
 import cell3
 
-import driver.assistant
+Server().localhost() # Give it an index.html file to improve it

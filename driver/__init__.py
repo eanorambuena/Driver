@@ -1,5 +1,6 @@
 from egg.resources.modules import installFromRequests, install_option_1
 from egg.resources.console import sleep
+from egg.resources.server import Server
 
 """
 FUNCTION init()
