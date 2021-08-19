@@ -1,11 +1,13 @@
-from egg.resources.structures import Stack
+from egg.resources.structures import *
 
-pilita = Stack([1,2])
+pilita = Stack(["pizza","piña"])
 
-i = pilita.Iterator()
+matriz = Matrix(2*[pilita])
+matriz.display()
 
-for index in i.indexes:
-    print(i.value)
-    i.next()
+pq = PriorityQueue([1,3,4,3,3,7,1,2])
+pq.pop()
+pq.pop()
+pq.display()
 
-print(type(i))
+matriz.iterate(print)

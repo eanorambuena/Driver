@@ -2,26 +2,54 @@
 from egg.resources.strings import normalize
 
 """
-FUNCTION var_name(variable)
+FUNCTION varName(variable)
 
 Returns the name of a variable from globals()
 
 Eg:
 variable = 3
-print(var_name(variable))
+print(varName(variable))
 >>> variable
 
 That includes the names of classes instances
 
 Eg:
 instance = MyClass()
-print(var_name(instance))
+print(varName(instance))
 >>> instance
 """
-def var_name(variable):
+def varName(variable):
     for name in globals():
         if eval(name) == variable:
             return(name)
+
+
+"""
+FUNCTION printVarName(variable)
+
+Prints the name of a variable from globals()
+
+Eg:
+instance = MyClass()
+printVarName(instance)
+>>> instance
+"""
+def printVarName(variable):
+    print(varName(variable))
+
+"""
+FUNCTION printVarName(variable)
+
+Prints the type of a variable
+
+Eg:
+s = Stack(["pizza","pineapple"])
+printVarType(s)
+>>> egg.resources.structures.lists.Stack
+"""
+def printVarType(variable):
+    t = str(type(variable))
+    print(t[8:-2])
 
 """
 CLASS var()
@@ -55,7 +83,7 @@ spanish_phrase.norm
 """
 class var():
     def __init__(self, var):
-        self.var=var
+        self.var = var
     @property
     def float(self):
         return float(self.int)
@@ -72,7 +100,7 @@ class var():
     @property
     def bool(self):
         if isinstance(self.var, str):
-            if self.var.lower()=="true":
+            if self.var.lower() == "true":
                 return True
             else:
                 return False 
@@ -81,7 +109,7 @@ class var():
     def norm(self): # Remove accents from words
         return normalize(self.str)
 
-if __name__=="__main__":
+if __name__ == "__main__":
     If = "you are reading this,"
     you = var("are not importing this file")
-    print(var_name(If), If, var_name(you), you.str) #Example of usage
+    print(varName(If), If, varName(you), you.str) #Example of usage
