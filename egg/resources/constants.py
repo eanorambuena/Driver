@@ -17,3 +17,13 @@ blue=colour(BLUE)
 purple=colour(PURPLE)
 cyan=colour(CYAN)
 white=colour(WHITE)
+
+segment = "█"
+whiteSegment = "█"
+blackSegment = " "
+
+limit = "|"
+
+square = 2 * segment
+whiteSquare = white + square
+blackSquare = black + square

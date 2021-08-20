@@ -1,13 +1,25 @@
 from egg.resources.structures import *
+from egg.resources.console import ProgressBar, clearConsole
 
-pilita = Stack(["pizza","piña"])
+# bar = ProgressBar()
+# bar.iterate(printPercent = True)
 
-matriz = Matrix(2*[pilita])
-matriz.display()
+M = [[255,0,0,255,255,255,0,255], [0,0,0,255,255,255,0,255], [0,255,0,255,0,255,0,255], [0,255,255,255,255,255,0,255], [0,255,255,255,255,255,0,255], [0,0,255,255,255,0,0,255], [0,0,255,255,0,0,0,255], [0,0,255,255,0,0,0,255]]
 
-pq = PriorityQueue([1,3,4,3,3,7,1,2])
-pq.pop()
-pq.pop()
-pq.display()
+matriz = Image()
+matriz.loadFromBW(M)
+matriz.printRGB()
 
-matriz.iterate(print)
+jj = [[[242, 80, 34], [127, 186, 0]], [[0, 164, 239], [255, 185, 0]]]
+m = Image()
+m.loadFromRGB(jj)
+m.printRGB()
+m.bias = [255, 0, 0]
+m.printRGB()
+
+x = Image()
+x.load("example.jpg")
+x.printRGB()
+x.printBW()
+
+# m.save("micro.jpg") # Not working yet
