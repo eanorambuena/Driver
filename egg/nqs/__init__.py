@@ -1,5 +1,5 @@
-from nqs.developer.write import write
-from nqs.developer.run import run
+from egg.nqs.core import *
+from egg.nqs.developer import *
 
 _author="eanorambuena"
 _author_email="eanorambuena@uc.cl"

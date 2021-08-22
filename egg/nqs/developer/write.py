@@ -1,4 +1,4 @@
-import nqs.core.core as core
+import egg.nqs.core as core
 from egg.resources.extensions import py
 
 def write(name: str):

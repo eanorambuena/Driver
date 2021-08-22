@@ -1,6 +1,16 @@
 from egg.resources.console.display import clearConsole, sleep
 from egg.resources.constants import whiteSegment, blackSegment, limit
 
+"""
+CLASS ProgressBar()
+
+A progress bar pip-like for console implementations.
+
+Eg:
+bar = ProgressBar()
+bar.iterate(printPercent = True)
+>>> |████████████████████████████████|      100%
+"""
 class ProgressBar():
     def __init__(self):
         self.whiteSegment = whiteSegment

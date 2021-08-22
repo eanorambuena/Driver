@@ -1,5 +1,5 @@
-from nqs.core.reader import settings
-from nqs.core.quantum import quantum
+from egg.nqs.core.reader import settings
+from egg.nqs.core.quantum import quantum
 from egg.resources.extensions import nqa
 from egg.resources.parser import Parser
 

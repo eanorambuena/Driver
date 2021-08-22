@@ -1,5 +1,5 @@
 from egg.library import nqsCommands, eggConsoleCommands
-from nqs.core.functions import Func,clear
+from egg.nqs.core.functions import Func,clear
 from egg.resources.console import sleep
 
 def settings(command: str,param):

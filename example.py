@@ -1,8 +1,11 @@
 from egg.resources.structures import *
-from egg.resources.console import ProgressBar, clearConsole
 
-# bar = ProgressBar()
-# bar.iterate(printPercent = True)
+x = Image()
+x.load("example.jpg")
+
+import matplotlib.pyplot as plt
+import numpy as np
+plt.imshow(np.array(x.matrix))
 
 M = [[255,0,0,255,255,255,0,255], [0,0,0,255,255,255,0,255], [0,255,0,255,0,255,0,255], [0,255,255,255,255,255,0,255], [0,255,255,255,255,255,0,255], [0,0,255,255,255,0,0,255], [0,0,255,255,0,0,0,255], [0,0,255,255,0,0,0,255]]
 
@@ -22,4 +25,4 @@ x.load("example.jpg")
 x.printRGB()
 x.printBW()
 
-# m.save("micro.jpg") # Not working yet
+#m.save("micro.jpg") # Not working yet

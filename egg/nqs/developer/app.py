@@ -1,5 +1,5 @@
-from nqs.developer.run import run
-from nqs.core.core import compile
+from egg.nqs.developer.run import run
+from egg.nqs.core import compile
 from egg.resources.extensions import nqa
 from egg.resources.console import display, get, sleep
 from egg.resources.constants import *

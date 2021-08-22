@@ -1,4 +1,4 @@
-from driver import init, Server
+from egg.driver import init, Server
 
 init() # Initialize driver file
 
